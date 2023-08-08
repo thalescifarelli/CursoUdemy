@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Live Server</title>
+</head>
+<body>
+    Teste Live Server
+    <script>
+        //escopo: global, função, bloco
+
+
+        function escopoFuncao()
+        {
+
+            if(true)
+            {
+                if(true)
+                {
+                    var serie = 'Game Of Thrones'
+
+                    console.log(serie)
+                }
+            }
+
+            console.log(serie)
+            
+        }
+
+        
+        escopoFuncao()
+
+        console.log(serie)
+
+        {
+            console.log(serie)
+        }
+
+    </script>
+</body>
+</html>

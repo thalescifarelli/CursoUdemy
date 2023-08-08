@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametros Padroes</title>
+</head>
+<body>
+    <div id="teste">
+
+    </div>
+    <script>
+
+        function contarUmaHistoria(personagem = 'Fubá', atividade = 'correr no parque', dono = 'João') {
+            return `Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${dono} e eles viveram felizes para sempre`
+        }
+
+        document.getElementById('teste').innerHTML = contarUmaHistoria(undefined, 'comer', 'Thales')
+
+    </script>
+</body>
+</html>
