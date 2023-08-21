@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Parte 1</title>
+</head>
+<body>
+    <div id="teste"></div>
+    <script>
+
+        //destructuring assigment no contexto de arrays
+        
+        // let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+        // let a = frutas[1]
+        // console.log(a)
+
+        // let [ a, b ] = frutas
+
+        // let [ a, b, , c ] = frutas
+
+        // let [ a, b = 'Banana', c, d, e = 'Morango' ] = frutas
+
+        //console.log(a, b, c, d, e)
+
+        let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria']]
+
+        let [, [, x]] = coisas
+
+        console.log(coisas[1][1])
+        console.log(x)
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trim</title>
+</head>
+<body>
+    <script>
+
+        let textoInicio = '                   teste'
+        console.log('.' + textoInicio)
+        console.log('.' + textoInicio.trimStart())
+        console.log('.' + textoInicio.trimLeft())
+
+        let textoFinal = 'teste                     '
+        console.log(textoFinal + '.')
+        console.log(textoFinal.trimEnd() + '.')
+        console.log(textoFinal.trimRight() + '.')
+
+        let texto = '             teste             '
+        console.log('.' + texto + '.')
+        console.log('.' + texto.trim() + '.')
+        console.log('.' + texto.trimEnd().trimStart() + '.')
+
+    </script>
+</body>
+</html>

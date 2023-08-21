@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators Parte 1</title>
+</head>
+<body>
+    
+    <div id="teste"></div>
+
+    <script>
+
+        function* testeGenerator() {
+            console.log('Teste 1.1')
+            yield 'Teste 1'
+            console.log('Teste 2.1')
+            yield console.log('Teste 2')
+            console.log('Teste 3.1')
+            yield console.log('Teste 3')
+
+            return 'Teste 4'
+        }
+
+        let meuGenerator = testeGenerator() //objeto iterator
+        //console.log(meuGenerator)
+
+        console.log(meuGenerator.next().value)
+        console.log('_________')
+        meuGenerator.next()
+        console.log('_________')
+        meuGenerator.next()
+        console.log('_________')
+        console.log(meuGenerator.next().value)
+
+
+    </script>
+
+</body>
+</html>

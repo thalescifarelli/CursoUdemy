@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Entries</title>
+</head>
+<body>
+    <script>
+
+        let dados = [
+            ['nome', 'Thales Cifarelli'],
+            ['profissional', [
+                ['site', 'thalescifarelli@gmail.com'],
+                ['profissão', 'Programador']
+            ]],
+            ['hobbies', ['caminhar', 'nadar']],
+            ['pais', 'Brasil']
+        ]
+
+        console.log(Object.fromEntries(dados))
+
+
+        //em JS, não temos suporte a arrays associativos
+        //objetos: chave e valor
+    </script>
+</body>
+</html>

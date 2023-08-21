@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Promise</title>
+</head>
+<body>
+    <script>
+        
+        let a = 'Teste'
+
+        let promessa = new Promise ((resolve, reject) => resolve(a))
+        .then(b => b)
+        .then(c => c)
+        .then(f => console.log(f))
+        
+        promessa.then()
+
+    </script>
+</body>
+</html>

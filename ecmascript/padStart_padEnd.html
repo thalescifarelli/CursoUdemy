@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PadStart PadEnd</title>
+</head>
+<body>
+    <script>
+
+        //padStar (preenchimento a esquerda)
+        let codigoStart = '1000';
+        //expectativa 0000001000
+        codigoStart = codigoStart.padStart(10, 0)
+        console.log(codigoStart)
+
+
+        //padStar (preenchimento a esquerda)
+        let codigoEnd = '1000';
+        //expectativa 1000000000
+        codigoEnd = codigoEnd.padEnd(10, 0)
+        console.log(codigoEnd)
+        
+    </script>
+</body>
+</html>

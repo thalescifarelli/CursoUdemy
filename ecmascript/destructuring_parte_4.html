@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Parte 1</title>
+</head>
+<body>
+    <div id="teste"></div>
+    <script>
+
+        //destructuring assigment junto com rest
+        
+        //array
+
+        let arr = [10, 20, 30, 40]
+        let [ a, b, ...x ] = arr
+
+        // console.log(a, b, x)
+
+        //objeto
+
+        let obj = {
+            a:10,
+            b:20,
+            c:30,
+            d:40
+        }
+        let { a: p, c: h, ...resto } = obj
+        console.log(p, h, resto)
+
+    </script>
+</body>
+</html>

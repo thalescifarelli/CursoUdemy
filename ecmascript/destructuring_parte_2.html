@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Parte 1</title>
+</head>
+<body>
+    <div id="teste"></div>
+    <script>
+
+        //destructuring assigment no contexto de objetos
+        
+        let produto = {
+            descricao: 'Notebook',
+            preco: 2500,
+            detalhes: {
+                fabricante: 'Abc',
+                modelo: 'Xyz'
+            }
+        }
+
+        //token (arrays) => []
+        //token (objetos) => {}
+
+        // let { descricao, preco} = produto
+        // console.log(descricao, preco)
+        
+        //nomer as variaveis com outros nomes
+
+        // let { descricao: d, preco: p} = produto
+        // console.log(d, p)
+
+        //valores default para lidar com atributos undefined
+
+        // let { descricao: d, preco: p = 0, desconto = 5 } = produto
+        // console.log(d, p, desconto)
+
+        //extrair atributos de objetos pertencentes a atributos do objeto
+
+        let { descricao: d, detalhes: { fabricante: f, modelo: m = 'Padrão'} } = produto
+        console.log(d,f,m)
+
+    </script>
+</body>
+</html>

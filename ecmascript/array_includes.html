@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Includes</title>
+</head>
+<body>
+    
+    <div id="teste"></div>
+
+    <script>
+
+        let arr = [ 'banana', 'maçã', 'uva']
+
+        //existe um determinado elemento
+        
+        //find retorna o valor pesquisado se existente ou undefined caso não exista
+        let retornoFind = arr.find((item) => item == 'abacaxi')
+        console.log(retornoFind)
+
+
+        //includes retorna true se existente ou false se inexistente
+        let retornoIncludes = arr.includes('abacaxi')
+        console.log(retornoIncludes)
+
+
+        
+    </script>
+
+</body>
+</html>

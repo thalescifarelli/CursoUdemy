@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Spread Parte 1</title>
+</head>
+<body>
+    
+    <script>
+
+        //contexto spread --> ultilizado para expandir
+
+        //string 
+        let tituloArtigo = 'Como ultizar o operador rest/spread'
+        console.log(tituloArtigo)
+        console.log(...tituloArtigo)
+        console.log([...tituloArtigo])
+        console.log({...tituloArtigo})
+
+        //array
+        let listaCursos1 = ['NodeJs e MongoDB', 'Angular']
+        let listaCursos2 = ['Solid', 'Laravel']
+        let listaCompletaCursos = ['Web Completo', 'Banco de Dados', ...listaCursos1, ...listaCursos2]
+        console.log(listaCompletaCursos)
+
+        //objetos
+        let pessoa = { nome: 'Pedro', idade: 32}
+        let cadastroCompleto = { endereco: 'Rua abc', ...pessoa}
+        console.log(cadastroCompleto)
+
+    </script>
+
+</body>
+</html>

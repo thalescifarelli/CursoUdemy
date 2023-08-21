@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises Parte 1</title>
+</head>
+<body>
+
+    <div id="teste"></div>
+
+    <script>
+
+        let promessa = new Promise((resolve, reject) => {
+
+            //requisição http para recuperar uma relação de usuários
+            setTimeout(() => {
+                
+                //requisição foi realizada de algum modo
+                let resposta_da_requisicao = {}
+
+                //erro na requisição
+                if(false)
+                {
+
+                    resposta_da_requisicao ={
+                        codigo: 1050,
+                        erro: 'Falha de autorização'
+                    }
+
+                    reject(resposta_da_requisicao)
+                }
+
+                resposta_da_requisicao = {
+                    0: { id: 1, nome: 'João' },
+                    1: { id: 2, nome: 'José'},
+                    2: { id: 3, nome: 'Maria'}
+                }
+
+                resolve(resposta_da_requisicao)
+
+            }, 4000);
+        })
+        .then((dados) => {
+            
+            console.log(dados)
+            
+            let promessa2 = new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+                
+                //requisição foi realizada de algum modo
+                let resposta_da_requisicao = {}
+
+                //erro na requisição
+                if(false)
+                {
+
+                    resposta_da_requisicao ={
+                        codigo: 7788,
+                        erro: 'Erro ao recuperar os posts dos usuarios'
+                    }
+
+                    reject(resposta_da_requisicao)
+                }
+
+                resposta_da_requisicao = {
+                    0: { id: 1, usuario_id: 1, post: [
+                        { id: 1, post: 'Post 1'},
+                        { id: 2, post: 'Post 2'}
+                    ] },
+                    1: { id: 2, usuario_id: 2, post: [
+                        { id: 3, post: 'Post 1'},
+                        { id: 4, post: 'Post 2'}
+                    ]},
+                    2: { id: 3, usuario_id: 3, post: [
+                        { id: 5, post: 'Post 1'},
+                        { id: 6, post: 'Post 2'}
+                    ]}
+                }
+
+                resolve(resposta_da_requisicao)
+
+            }, 4000);
+
+            })
+            .then((dados) => {
+                console.log(dados)
+            })
+            .catch((erro) => {
+                console.log(erro)
+            })
+
+        })
+        .then((param) => {
+            console.log('Then numero 2 ', param)
+        })
+        .then(() => {
+            console.log('Then numero 3')
+        })
+        .then(() => {
+            console.log('Then numero 4')
+
+            return 'Parametro capturado no Then 4 e enviado para o Then seguinte'
+        })
+        .catch((erro) => {
+            console.log('Falha na requisição', erro)
+
+            return 'Parametro capturado no catch e enviado para o Then seguinte'
+        })
+        .then((param) => {
+            console.log('Then numero 5', param)
+        })
+        .then(() => {
+            console.log('Then numero 6')
+        })
+
+        
+
+    </script>
+    
+</body>
+</html>

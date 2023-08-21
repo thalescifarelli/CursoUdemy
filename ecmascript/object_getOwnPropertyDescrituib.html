@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Own Property Descriptors</title>
+</head>
+<body>
+    <script>
+
+        let objeto = {
+            nome: 'Thales',
+            profissional: {
+                site: 'github.io/Thales',
+                profissao: 'Programador'
+            },
+            hobbies: [
+                { id: 1, hobbie: 'Fazer trilhas'},
+                { id: 2, hobbie: 'Dormir'},
+            ],
+            pais: 'Brasil'
+        }
+
+        //descritores de propriedades
+        // console.log(Object.getOwnPropertyDescriptors(objeto))
+
+        //--
+        //Descritor Writable: quando definido com o false, ele indica que o valor da propriedade não poderá ser modificada
+        // Object.defineProperty(objeto, 'nome', {
+        //     value: 'Thales',
+        //     writable: false
+        // })
+        // console.log(Object.getOwnPropertyDescriptors(objeto))
+
+
+        //--
+        //Descritor Enumerable: quando definido com o false, ele indica que o valor da propriedade não será exibida em laços de repetição
+
+        // for(let propriedade in objeto) {
+        //     console.log(propriedade, objeto[propriedade])
+        // }
+        
+        // Object.defineProperty(objeto, 'hobbies', {
+        //     enumerable: false
+        // })
+
+        // Object.defineProperty(objeto, 'profissional', {
+        //     enumerable: false
+        // })
+
+        // console.log(Object.getOwnPropertyDescriptors(objeto))
+
+        // console.log('------------------------------------')
+
+        // for(let propriedade in objeto) {
+        //     console.log(propriedade, objeto[propriedade])
+        // }
+
+        //--
+        //Descritor Configurable: quando definido com o false, ele indica que o valor da propriedade não poderá ser deletada e também não podemos mais modificar os descritores, exceto a mudança de writable para false
+
+        // console.log(Object.getOwnPropertyDescriptors(objeto))
+
+        Object.defineProperty(objeto, 'pais', {
+            configurable: false
+        })
+
+        console.log(Object.getOwnPropertyDescriptors(objeto))
+
+    </script>
+</body>
+</html>

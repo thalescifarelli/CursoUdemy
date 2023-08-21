@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Values</title>
+</head>
+<body>
+    <script>
+
+        let objeto = {
+            nome: 'Thales',
+            profissional: {
+                site: 'github.io/Thales',
+                profissao: 'Programador'
+            },
+            hobbies: [
+                { id: 1, hobbie: 'Fazer trilhas'},
+                { id: 2, hobbie: 'Dormir'},
+            ],
+            pais: 'Brasil'
+        }
+
+        console.log(objeto)
+        console.log(Object.values(objeto))
+        
+    </script>
+</body>
+</html>
